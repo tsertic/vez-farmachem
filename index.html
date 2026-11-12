@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VEZ Farmachem — API sourcing and pharmaceutical intermediation</title>
+  <meta name="description" content="VEZ Farmachem d.o.o. is a Zagreb-based, EU GDP compliant partner for sourcing, co-development and distribution of Active Pharmaceutical Ingredients.">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-17)">
+        <rect width="2.4" height="5" fill="#e9e9e6"/>
+      </pattern>
+      <symbol id="vf-mark" viewBox="0 0 124 100">
+        <polygon points="2,4 28,4 57,96 40,96" fill="url(#hatch)"/>
+        <polygon points="77,10 124,10 118,30 93,30 88,46 110,46 104,64 83,64 73,96 51,96" fill="url(#hatch)" opacity="0.55"/>
+        <polygon points="69.8,4 120,4 113.8,26 85.6,26 81.1,42 104,42 98.4,62 75.5,62 66,96 44,96" fill="#ebd801"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 16 16">
+        <path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 16 16">
+        <path d="m3 8.5 3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-molecule" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M16 8.5 26.4 14.5v12L16 32.5 5.6 26.5v-12Z"/>
+          <path d="M26.4 26.5 36.8 20.5l8 4.6v9.4l-8 4.6-10.4-6"/>
+          <path d="M11 16.5v8M16 13.6l5.6 3.2"/>
+        </g>
+        <circle cx="16" cy="38" r="3" fill="#ebd801"/>
+        <path d="M16 32.5V35" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-tablets" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="9" width="38" height="30" rx="5"/>
+          <circle cx="16" cy="19" r="4.5"/>
+          <circle cx="32" cy="19" r="4.5"/>
+          <circle cx="16" cy="31" r="3"/>
+          <path d="M12.8 22.2l6.4-6.4M28.8 22.2l6.4-6.4"/>
+        </g>
+        <rect x="26" y="27" width="12" height="7" rx="3.5" fill="#ebd801"/>
+      </symbol>
+      <symbol id="icon-agency" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M6 24h36M24 6c-7 5-7 31 0 36M24 6c7 5 7 31 0 36"/>
+        </g>
+        <circle cx="33" cy="15" r="5" fill="#ebd801" stroke="#202020" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-dossier" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5h18l9 9v29H11Z"/>
+          <path d="M29 5v9h9M17 22h14M17 28h8"/>
+        </g>
+        <circle cx="32" cy="35" r="7" fill="#ebd801"/>
+        <path d="m28.8 35.2 2.3 2.3 4.2-4.6" fill="none" stroke="#16150a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="eu-star" viewBox="-8 -8 16 16">
+        <polygon points="0,-8 1.9,-2.6 7.6,-2.5 3,1 4.7,6.5 0,3.2 -4.7,6.5 -3,1 -7.6,-2.5 -1.9,-2.6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container">
+      <a class="brand" href="#top" aria-label="VEZ Farmachem home">
+        <svg viewBox="0 0 124 100" aria-hidden="true"><use href="#vf-mark"/></svg>
+        <span>VEZ<br>FARMACHEM</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#quality">Quality</a></li>
+          <li><a href="#network">Network</a></li>
+        </ul>
+        <a class="button button-primary" href="#contact">Get in touch <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">API sourcing · Co-development · Distribution</p>
+          <h1 class="reveal" style="--reveal-delay:.08s">Business excellence in pharmaceutical <span class="accent">intermediation</span></h1>
+          <p class="lede reveal" style="--reveal-delay:.16s">VEZ Farmachem connects European generic manufacturers with highly respectable API producers — with sourcing solutions tailored to the specific needs of each customer.</p>
+          <div class="hero-actions reveal" style="--reveal-delay:.24s">
+            <a class="button button-primary" href="#contact">Start a sourcing request <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a class="button button-ghost" href="#quality">GDP statement</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--reveal-delay:.2s" aria-hidden="true">
+          <svg class="flask" viewBox="0 0 520 520">
+            <defs>
+              <clipPath id="flask-body">
+                <path d="M228 70V192L98 416a26 26 0 0 0 22 40h280a26 26 0 0 0 22-40L292 192V70Z"/>
+              </clipPath>
+              <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
+                <stop offset=".5" stop-color="#fff" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#fff" stop-opacity=".55"/>
+              </linearGradient>
+              <pattern id="hatch-wide" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(-17)">
+                <rect width="4" height="11" fill="#fff"/>
+              </pattern>
+            </defs>
+
+            <circle class="orbit" cx="260" cy="270" r="236"/>
+            <circle class="orbit orbit-inner" cx="260" cy="270" r="178"/>
+
+            <g class="lattice">
+              <path d="M70 96 96 111v30l-26 15-26-15v-30ZM96 141l26 15v30l-26 15-26-15v-30Z"/>
+              <path d="M452 300l26 15v30l-26 15-26-15v-30ZM426 345l26 15v30l-26 15"/>
+              <circle cx="122" cy="186" r="5"/><circle cx="44" cy="111" r="5"/><circle cx="478" cy="315" r="5"/>
+            </g>
+
+            <g clip-path="url(#flask-body)">
+              <rect x="80" y="60" width="360" height="400" fill="#fff" opacity=".035"/>
+              <polygon points="120,460 190,460 290,180 250,180" fill="url(#hatch-wide)" opacity=".28"/>
+              <path class="liquid" d="M60 330c50-16 90 14 140 0s90-14 140 0 90 14 140 0v140H60Z"/>
+              <circle class="bubble" cx="214" cy="400" r="7"/>
+              <circle class="bubble bubble-slow" cx="290" cy="420" r="4.5"/>
+              <circle class="bubble bubble-late" cx="330" cy="390" r="6"/>
+            </g>
+            <path d="M228 70V192L98 416a26 26 0 0 0 22 40h280a26 26 0 0 0 22-40L292 192V70" fill="none" stroke="url(#glass)" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="214" y="54" width="92" height="18" rx="9" fill="none" stroke="url(#glass)" stroke-width="4"/>
+            <path d="M246 96v84L140 372" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+
+          <div class="float-chip chip-compliance">
+            <span class="chip-dot"></span>
+            <span><strong>EU GDP</strong> compliant distribution</span>
+          </div>
+          <div class="float-chip chip-registrations">
+            <strong>400+</strong>
+            <span>API registrations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="trust-strip reveal">
+          <li>EU GMP Vol. 4, Part II</li>
+          <li>GDP for active substances</li>
+          <li>HALMED approved</li>
+          <li>Documented QMS · 23 SOPs</li>
+          <li>Full batch traceability</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section stats-section" aria-label="Company in numbers">
+      <dl class="container stats">
+        <div class="stat reveal">
+          <dt>Years of API market experience</dt>
+          <dd><span data-count-to="30">30</span>+</dd>
+        </div>
+        <div class="stat reveal" style="--reveal-delay:.08s">
+          <dt>API registrations obtained</dt>
+          <dd><span data-count-to="400">400</span>+</dd>
+        </div>
+        <div class="stat reveal" style="--reveal-delay:.16s">
+          <dt>Standard operating procedures</dt>
+          <dd><span data-count-to="23">23</span></dd>
+        </div>
+        <div class="stat reveal" style="--reveal-delay:.24s">
+          <dt>Offices — Zagreb and Kyiv</dt>
+          <dd><span data-count-to="2">2</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="section-head">
+          <p class="eyebrow reveal">About</p>
+          <h2 class="reveal">A young company with a rich heritage</h2>
+          <p class="lede reveal">VEZ Farmachem inherited decades of business experience in the generic pharmaceutical market. We took part in the growth of the entire Farmachem Group, and since the 2014 restructuring a substantial part of the activities of the former Swiss headquarters is run from Zagreb, inside the European Union.</p>
+          <p class="reveal">We work in procurement of new technologies, co-development and distribution of Active Pharmaceutical Ingredients, cooperating exclusively with highly respectable pharmaceutical producers.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline-year">2001</span>
+            <h3>Representative office in Kyiv</h3>
+            <p>Opened as part of Farmachem Machineries and Marketing S.A., starting cooperation with all major Ukrainian pharmaceutical companies.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-year">2014</span>
+            <h3>Headquarters move to Croatia</h3>
+            <p>Group restructuring transfers a substantial part of activities from Switzerland to VEZ Farmachem d.o.o. in Zagreb.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-year">2017</span>
+            <h3>HALMED GDP approval</h3>
+            <p>The Croatian Agency for Medicinal Products and Medical Devices confirms compliance with EU Good Distribution Practice.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">What we do</p>
+          <h2 class="reveal">Expert sourcing, from active substance to finished form</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <svg class="service-icon" aria-hidden="true"><use href="#icon-molecule"/></svg>
+            <span class="service-index">01</span>
+            <h3>API sourcing</h3>
+            <p>More than 30 years of collaboration with API producers of every kind — small, large, institutional or private — lets us deliver sourcing solutions tailored to individual requirements, exclusively from reliable, reputable, high-quality manufacturers.</p>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay:.08s">
+            <svg class="service-icon" aria-hidden="true"><use href="#icon-tablets"/></svg>
+            <span class="service-index">02</span>
+            <h3>In-bulk finished dosage forms</h3>
+            <p>Many producers now offer finished dosage forms alongside API. Partners can start development from scratch or select an already developed, ready-made form in bulk — saving valuable time and development effort.</p>
+          </article>
+          <article class="service-card reveal">
+            <svg class="service-icon" aria-hidden="true"><use href="#icon-agency"/></svg>
+            <span class="service-index">03</span>
+            <h3>Agency representation</h3>
+            <p>Years of collaboration built a strong bond of trust with the generic industry. Producers that are global leaders in their fields approach VEZ Farmachem to represent them in the territories where we are active.</p>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay:.08s">
+            <svg class="service-icon" aria-hidden="true"><use href="#icon-dossier"/></svg>
+            <span class="service-index">04</span>
+            <h3>Regulatory know-how</h3>
+            <p>We know the regulatory processes of our territories well and can anticipate what customers need and what producers must prepare in advance. The result is a faster product launch with minimal obstacles and delays.</p>
+          </article>
+        </div>
+
+        <div class="catalyst reveal">
+          <div>
+            <p class="eyebrow">Added value</p>
+            <h3>Present on both sides of the market</h3>
+            <p>Our work acts as a catalyst. Broad knowledge of producers, their capabilities and their specific strengths lets us suggest the right partner from the beginning — and connect principals with clients so transparently that they soon become long-term partners.</p>
+          </div>
+          <ol class="catalyst-flow">
+            <li><span>Producer</span>API and FDF manufacturers</li>
+            <li class="is-core"><span>VEZ Farmachem</span>Sourcing · quality · regulatory</li>
+            <li><span>Customer</span>Generic pharmaceutical companies</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quality">
+      <div class="container quality-grid">
+        <div class="quality-visual reveal" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="96" fill="none" stroke="rgba(255,255,255,.1)"/>
+            <g fill="#ebd801">
+              <use href="#eu-star" x="92" y="22" width="16" height="16"/>
+              <use href="#eu-star" x="127" y="31.4" width="16" height="16"/>
+              <use href="#eu-star" x="152.6" y="57" width="16" height="16"/>
+              <use href="#eu-star" x="162" y="92" width="16" height="16"/>
+              <use href="#eu-star" x="152.6" y="127" width="16" height="16"/>
+              <use href="#eu-star" x="127" y="152.6" width="16" height="16"/>
+              <use href="#eu-star" x="92" y="162" width="16" height="16"/>
+              <use href="#eu-star" x="57" y="152.6" width="16" height="16"/>
+              <use href="#eu-star" x="31.4" y="127" width="16" height="16"/>
+              <use href="#eu-star" x="22" y="92" width="16" height="16"/>
+              <use href="#eu-star" x="31.4" y="57" width="16" height="16"/>
+              <use href="#eu-star" x="57" y="31.4" width="16" height="16"/>
+            </g>
+            <text x="100" y="97" text-anchor="middle" class="seal-title">GDP</text>
+            <text x="100" y="117" text-anchor="middle" class="seal-sub">ACTIVE SUBSTANCES</text>
+          </svg>
+        </div>
+
+        <div>
+          <div class="section-head">
+            <p class="eyebrow reveal">Quality and compliance</p>
+            <h2 class="reveal">Regulated by European GDP</h2>
+            <p class="lede reveal">VEZ Farmachem d.o.o. operates in compliance with EU GMP Volume 4, Part II, Chapter 17, and the Guidelines of 19 March 2015 on principles of Good Distribution Practice of active substances for medicinal products for human use.</p>
+          </div>
+
+          <ul class="checklist">
+            <li class="reveal"><svg aria-hidden="true"><use href="#icon-check"/></svg><div><h3>Documented quality management system</h3><p>Our QMS governs the processes, procedures and responsibilities behind our quality policies and objectives.</p></div></li>
+            <li class="reveal"><svg aria-hidden="true"><use href="#icon-check"/></svg><div><h3>23 standard operating procedures</h3><p>Approved SOPs cover both Active Pharmaceutical Ingredients and Medical Devices.</p></div></li>
+            <li class="reveal"><svg aria-hidden="true"><use href="#icon-check"/></svg><div><h3>Traceability, end to end</h3><p>A maintained system of traceability, with every quality-related procedure described and approved.</p></div></li>
+            <li class="reveal"><svg aria-hidden="true"><use href="#icon-check"/></svg><div><h3>Audit-ready documentation</h3><p>All QMS documentation is prepared and readily available for inspection during audit.</p></div></li>
+          </ul>
+
+          <p class="approval reveal">
+            <span>HALMED approval</span>
+            No. 381-10-05/228-17-05 · 24 October 2017
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="network">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">International footprint</p>
+          <h2 class="reveal">Rooted in the EU, connected beyond it</h2>
+          <p class="lede reveal">From our Zagreb headquarters we serve European partners, while our representative office in Kyiv has worked with all major Ukrainian pharmaceutical companies since 2001 — regulatory work that resulted in more than 400 API registrations.</p>
+        </div>
+
+        <div class="network-map reveal">
+          <svg viewBox="0 0 800 420" role="img" aria-label="Map plot of VEZ Farmachem locations: headquarters in Zagreb, representative office in Kyiv, group heritage in Switzerland">
+            <defs>
+              <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="#fff" opacity=".13"/>
+              </pattern>
+            </defs>
+            <rect width="800" height="420" fill="url(#dot-grid)"/>
+            <g class="graticule">
+              <path d="M160 0v420M320 0v420M480 0v420M640 0v420M0 84h800M0 252h800"/>
+              <text x="166" y="410">0°</text><text x="326" y="410">10°E</text><text x="486" y="410">20°E</text><text x="646" y="410">30°E</text>
+              <text x="8" y="78">55°N</text><text x="8" y="246">45°N</text>
+            </g>
+            <path class="route" d="M416 238Q350 170 291 222"/>
+            <path class="route" d="M416 238Q540 120 648 160"/>
+            <g class="node node-hub" transform="translate(416 238)">
+              <circle class="pulse" r="10"/><circle r="7"/>
+              <text x="14" y="26">Zagreb</text><text class="node-role" x="14" y="42">Headquarters</text>
+            </g>
+            <g class="node" transform="translate(648 160)">
+              <circle r="5"/>
+              <text x="12" y="-10">Kyiv</text><text class="node-role" x="12" y="24">Representative office</text>
+            </g>
+            <g class="node" transform="translate(291 222)">
+              <circle r="5"/>
+              <text x="-12" y="-14" text-anchor="end">Switzerland</text><text class="node-role" x="-12" y="4" text-anchor="end">Farmachem Group heritage</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-banner reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Looking for a reliable API partner?</h2>
+            <p class="lede">Tell us which substance or finished form you need. We will suggest the right producer from the start.</p>
+          </div>
+          <a class="button button-primary" href="mailto:vez@vez-farmachem.com">vez@vez-farmachem.com <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        </div>
+
+        <div class="office-grid">
+          <address class="office-card reveal">
+            <span class="office-tag">Headquarters · EU</span>
+            <h3>VEZ Farmachem d.o.o.</h3>
+            <p>Strojarska 20<br>10 000 Zagreb, Croatia</p>
+            <dl>
+              <div><dt>Phone</dt><dd><a href="tel:+38515551818">+385 1 555 1818</a></dd></div>
+              <div><dt>Fax</dt><dd>+385 1 555 1819</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:vez@vez-farmachem.com">vez@vez-farmachem.com</a></dd></div>
+            </dl>
+          </address>
+          <address class="office-card reveal" style="--reveal-delay:.08s">
+            <span class="office-tag">Representative office</span>
+            <h3>VEZ Farmachem Ukraine</h3>
+            <p>Staronavodnitskaya Str. 6A, Ap. 48<br>01015 Kyiv, Ukraine</p>
+            <dl>
+              <div><dt>Phone</dt><dd><a href="tel:+380442855494">+38 044 285 54 94</a></dd></div>
+              <div><dt>Fax</dt><dd>+38 044 284 23 25</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:vez@farmachem.kiev.ua">vez@farmachem.kiev.ua</a></dd></div>
+            </dl>
+          </address>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <svg viewBox="0 0 124 100" aria-hidden="true"><use href="#vf-mark"/></svg>
+        <span>VEZ<br>FARMACHEM</span>
+      </a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#quality">GDP statement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p>© 2026 VEZ Farmachem d.o.o. · Zagreb, Croatia</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

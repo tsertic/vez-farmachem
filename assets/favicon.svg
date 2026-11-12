@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-17)">
+      <rect width="3.6" height="7" fill="#e9e9e6"/>
+    </pattern>
+  </defs>
+  <rect width="124" height="124" rx="22" fill="#202020"/>
+  <g transform="translate(8 18) scale(0.88)">
+    <polygon points="2,4 28,4 57,96 40,96" fill="url(#hatch)"/>
+    <polygon points="69.8,4 120,4 113.8,26 85.6,26 81.1,42 104,42 98.4,62 75.5,62 66,96 44,96" fill="#ebd801"/>
+  </g>
+</svg>
